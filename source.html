@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Outlook Add-in Entry</title>
+  <!-- Office.js 是必须的 -->
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <script>
+    // 当 Office 加载完成
+    Office.onReady(() => {
+      console.log("Office Add-in is ready");
+    });
+
+    // 点击按钮时调用
+    function openHomepage() {
+      // 打开你的产品主页
+      Office.context.ui.openBrowserWindow("https://denshobako.sharepointguild.com/");
+    }
+  </script>
+</head>
+<body>
+  <h3>Outlook Add-in Entry Page</h3>
+  <p>点击下面按钮访问你的产品主页：</p>
+  <button onclick="openHomepage()">Open Product Homepage</button>
+</body>
+</html>
